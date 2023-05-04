@@ -12,8 +12,8 @@ var generateBtn = document.querySelector("#generate");
 function generatePassword() {
   // YOUR CODE HERE
   var password = "";
-  for (var i = 0; i < characterLength;) {
-    var randomChar = Math.floor(Math.random() * choiceArr.length)
+  for (var i = 0; i < characterLength; i++) {
+    var randomChar = Math.floor(Math.random() * choiceArr.length) 
     password = password + choiceArr[randomChar];
   }
   return password;
@@ -45,19 +45,16 @@ function getPrompts() {
 
 // Write password to the #password input
 function writePassword() {
-  var rightPrompts = getPrompts();
+var correctPrompts = getPrompts();
+var passwordText = document.querySelector("#password");
 
-  if (rightPrompts) {
-    var randomPass = generatePassword();
-    var passwordText = document.querySelector("#password");
+  if (correctPrompts) {
+    var randomPass = generatePassword();  
     passwordText.value = randomPass;
   } else {
-    passTest.value = "";
+    passwordText.value = "";
   }
-return;
 }
-
-
 
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
