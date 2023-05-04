@@ -3,6 +3,8 @@
 ## Description
 A site to generate a unique password using javascript.
 
-[Deployed-Site]
+[Deployed-Site]()
 
 [Repository](https://github.com/rachela1/password-generator)
+
+![Screen](Assets\images\Screenshot.png)
